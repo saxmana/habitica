@@ -9,7 +9,7 @@ function applyEggDefaults (set, config) {
   each(set, (egg, key) => {
     defaults(egg, {
       canBuy: config.canBuy,
-      value: 3,
+      value: 1,
       key,
       notes: t('eggNotes', {
         eggText: egg.text,
@@ -259,7 +259,7 @@ applyEggDefaults(drops, {
 
 applyEggDefaults(quests, {
   canBuy () {
-    return false;
+    return true;
   },
 });
 
